@@ -27,15 +27,20 @@ package-lock.json
 _sass/vendors
 assets/js/dist
 
-# 忽略 Obsidian 生成的配置文件夹
+# ========== 基础忽略规则 ==========
+# 忽略 Obsidian 配置文件夹（全局）
 .obsidian/
 # 忽略 Windows/Mac 系统缓存文件
 .DS_Store
 Thumbs.db
 # 忽略 Obsidian 回收站
 *.trash/
-# 忽略 _posts 下的 templates 文件夹
+
+# ========== 博客相关忽略规则 ==========
+# 1. 忽略 _posts 下的 templates 文件夹（仅屏蔽模板，不影响文章）
 _posts/templates/
-# 忽略所有非文章格式的 md 文件（防止误提交模板）
-_posts/*.md
-!_posts/*-*-*-*.md # 仅保留日期开头的md文件
+# 2. 忽略 templates 文件夹内的所有 md 文件（精准屏蔽模板，而非整个 _posts）
+_posts/templates/*.md
+# 3. （可选）忽略 _posts 下非日期格式的零散 md 文件（如临时草稿）
+# 仅屏蔽直接以 md 结尾、但不是 YYYY-MM-DD-xxx.md 的文件（需用更精准的正则）
+_posts/!(*-*-*-*).md
