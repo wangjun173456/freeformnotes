@@ -22,6 +22,20 @@ package-lock.json
 !.vscode/extensions.json
 !.vscode/tasks.json
 
+
 # Misc
 _sass/vendors
 assets/js/dist
+
+# 忽略 Obsidian 生成的配置文件夹
+.obsidian/
+# 忽略 Windows/Mac 系统缓存文件
+.DS_Store
+Thumbs.db
+# 忽略 Obsidian 回收站
+*.trash/
+# 忽略 _posts 下的 templates 文件夹
+_posts/templates/
+# 忽略所有非文章格式的 md 文件（防止误提交模板）
+_posts/*.md
+!_posts/*-*-*-*.md # 仅保留日期开头的md文件
