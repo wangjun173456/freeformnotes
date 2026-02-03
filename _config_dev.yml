@@ -1,0 +1,4 @@
+# _config_dev.yml
+cdn: ""
+url: "http://localhost:4000"
+baseurl: ""
