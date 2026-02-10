@@ -44,3 +44,11 @@ _posts/templates/*.md
 # 3. （可选）忽略 _posts 下非日期格式的零散 md 文件（如临时草稿）
 # 仅屏蔽直接以 md 结尾、但不是 YYYY-MM-DD-xxx.md 的文件（需用更精准的正则）
 _posts/!(*-*-*-*).md
+
+# 忽略 Obsidian 图片附件文件夹（核心）
+assets/img/posts/
+
+# 可选：忽略 Obsidian 自带缓存/配置（避免无关文件提交）
+.obsidian/
+.DS_Store
+*.log
